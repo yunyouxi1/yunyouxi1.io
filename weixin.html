@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 游戏交易平台</title>
+<link rel="stylesheet" type="text/css" href="css/weixin.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" title="返回首页">
+                <img src="images/return.png" alt="极光游戏交易平台" class="logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+		
+        <h1>微信客服联系方式</h1>
+        
+        <div class="qrcode-container">
+            <img src="images/logo.jpg" alt="微信二维码" class="qrcode">
+        </div>
+
+        <div class="wechat-id" id="wechatId" onclick="copyWechatId()">
+            ‍💻 微信号 1号：xiaoYU066022 2号：z20222323
+        </div>
+
+        <div class="instructions">
+            <div class="step">1. 保存二维码到相册</div>
+            <div class="step">2. 打开微信扫一扫</div>
+            <div class="step">3. 选择相册中的二维码</div>
+            <div class="step">4. 即可添加客服微信</div>
+        </div>
+    </div>
+
+    <div class="copied-message" id="copiedMessage">微信号已复制到剪贴板</div>
+
+    <script>
+        function copyWechatId() {
+            const wechatId = 'Business2023';
+            const tempInput = document.createElement('input');
+            tempInput.value = wechatId;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const message = document.getElementById('copiedMessage');
+            message.style.opacity = '1';
+            setTimeout(() => {
+                message.style.opacity = '0';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

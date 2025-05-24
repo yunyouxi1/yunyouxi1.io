@@ -1,0 +1,59 @@
+	//王者荣耀卡片
+	products.push({
+		id: "wzry-001",
+		game: "王者荣耀",
+		category: "大国标",
+		title: "王者荣耀 大国标账号001",
+		price: 1088,
+		introduction: "国服老虎，公孙离",
+		shard: "QQ",
+		system: "安卓",
+	});
+
+
+	products.push({
+		id: "wzry-002",
+		game: "王者荣耀",
+		category: "大国标",
+		title: "王者荣耀 国标账号001",
+		price: 100,
+		introduction: "国服老虎，公孙离",
+		shard: "QQ",
+		system: "安卓",
+	});
+
+
+
+	//和平精英卡片
+	products.push({
+		id: "hpjy-001",
+		game: "和平精英",
+		category: "省标",
+		title: "和平精英 省标标账1号 #VIP001",
+		price: 100,
+		introduction: "广东",
+		shard: 1,
+		system: 105
+	});
+	//无畏契约卡片
+	products.push({
+		id: "wwqy-001",
+		game: "无畏契约",
+		category: "省标",
+		title: "无畏契约 省标标账1号 #VIP001",
+		price: 100,
+		introduction: "广东",
+		shard: "QQ",
+		system: "安卓",
+	});
+	//火影忍者卡片
+	products.push({
+		id: "hyrz-001",
+		game: "火影忍者",
+		category: "省标",
+		title: "火影忍者 省标标账号 #VIP001",
+		price: 100,
+		introduction: "小国标老虎",
+		shard: "QQ",
+		system: "安卓",
+	});

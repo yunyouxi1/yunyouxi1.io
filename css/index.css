@@ -1,0 +1,201 @@
+ :root {
+            --primary-color: #2a9fd6;
+            --dark-bg: #1a1a1a;
+            --content-bg: #2d2d2d;
+            --text-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+	list-style:none;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        /* 筛选导航 */
+        .filter-group {
+            background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+            padding: 1.2rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+            margin: 0.5rem 0;
+        }
+
+        .filter-label {
+            width: 100%;
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .filter-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            color: var(--text-color);
+            padding: 0.6rem 1.4rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(42, 159, 214, 0.3);
+            border-color: transparent;
+        }
+
+        /* 商品容器 */
+        .container {
+            max-width: 1200px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        /* 商品卡片 */
+        .account-card {
+            background: linear-gradient(145deg, #2d2d2d, #353535);
+            border-radius: 12px;
+            padding: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .account-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* 商品图片 */
+        .image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2556/1180;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background: #1a1a1a;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        /* 商品信息 */
+        .game-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .price-tag {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+        }
+
+        /* 功能按钮 */
+        .card-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .action-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .action-btn:hover {
+            background: var(--primary-color);
+            transform: scale(1.1);
+        }
+		
+		.card-link {
+		    text-decoration: none;
+		    color: inherit;
+		    display: block;
+		    position: relative;
+		    z-index: 1;
+		}
+		
+		/* 防止按钮被点击 */
+		.card-actions {
+		    position: relative;
+		    z-index: 2;
+		}
+
+        /* 响应式布局 */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                flex: 1 1 45%;
+            }
+			.filter-group {
+			    position: static; /* 取消固定定位 */
+			    padding: 1rem 0.5rem; /* 调整内边距 */
+			    box-shadow: none; /* 可选：移除阴影 */
+			}
+			
+			.filter-container {
+			    max-width: 100%; /* 全宽显示 */
+			}
+        }

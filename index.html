@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏交易平台</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+    <div class="filter-group">
+        <div class="filter-container">
+            <!-- 游戏筛选 -->
+            <div class="filter-row">
+                <span class="filter-label">选择游戏</span>
+                <button class="filter-btn active" data-type="game" data-value="all">全部</button>
+                <button class="filter-btn" data-type="game" data-value="王者荣耀">王者荣耀</button>
+                <button class="filter-btn" data-type="game" data-value="和平精英">和平精英</button>
+                <button class="filter-btn" data-type="game" data-value="无畏契约">无畏契约</button>
+                <button class="filter-btn" data-type="game" data-value="火影忍者">火影忍者</button>
+            </div>
+            
+            <!-- 账号类型筛选 -->
+            <div class="filter-row">
+                <span class="filter-label">账号类型</span>
+                <button class="filter-btn active" data-type="category" data-value="all">全部</button>
+                <button class="filter-btn" data-type="category" data-value="皮肤号">皮肤号</button>
+                <button class="filter-btn" data-type="category" data-value="省标">省标</button>
+                <button class="filter-btn" data-type="category" data-value="小国标">小国标</button>
+                <button class="filter-btn" data-type="category" data-value="大国标">大国标</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="grid" id="productGrid"></div>
+    </div>
+<script src="js/index.js"></script>
+
+</body>
+</html>

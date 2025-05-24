@@ -1,0 +1,159 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* 深色主题变量 */
+        :root {
+            --dark-bg: #1a1a1a;
+            --content-bg: #2d2d2d;
+            --text-color: #ffffff;
+            --accent-color: #2a9fd6;
+            --success-color: #27ae60;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background: rgba(25,25,25,0.95);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            max-width: 120px;
+            transition: opacity 0.3s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.8;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 主要内容容器 */
+        .container {
+            background: var(--content-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            margin: 20px auto;
+            flex: 1;
+        }
+
+        .wechat-logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1rem;
+            filter: invert(1);
+        }
+
+        h1 {
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .qrcode-container {
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .qrcode {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 2px solid rgba(255,255,255,0.1);
+            padding: 10px;
+        }
+
+        .wechat-id {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin: 1rem 0;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .wechat-id:hover {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .instructions {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 1.5rem;
+        }
+
+        .step {
+            margin: 10px 0;
+            padding: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .qrcode {
+                width: 180px;
+                height: 180px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .copied-message {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
